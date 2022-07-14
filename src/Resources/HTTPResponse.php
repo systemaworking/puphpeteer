@@ -12,6 +12,7 @@ use Nesk\Rialto\Data\BasicResource;
  * @method string statusText()
  * @method array<string, string> headers()
  * @method \Nesk\Puphpeteer\Resources\SecurityDetails|null securityDetails()
+ * @method mixed|null timing()
  * @method mixed buffer()
  * @method string text()
  * @method mixed json()

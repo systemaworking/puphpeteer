@@ -3,8 +3,10 @@
 namespace Nesk\Puphpeteer\Resources;
 
 /**
+ * @method mixed|null connection()
  * @method mixed send(mixed $method, mixed ...$paramArgs)
  * @method void detach()
+ * @method string id()
  */
 class CDPSession extends EventEmitter
 {

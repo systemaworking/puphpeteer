@@ -6,7 +6,7 @@ use Nesk\Rialto\Data\BasicResource;
 
 /**
  * @method void start(array<string, mixed> $options = null)
- * @method mixed stop()
+ * @method mixed|null stop()
  */
 class Tracing extends BasicResource
 {

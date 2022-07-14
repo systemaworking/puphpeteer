@@ -10,6 +10,7 @@ use vierbergenlars\SemVer\{version, expression, SemVerException};
 /**
  * @property-read mixed devices
  * @property-read mixed errors
+ * @property-read mixed networkConditions
  * @method \Nesk\Puphpeteer\Resources\Browser connect(array<string, mixed> $options)
  * @method void registerCustomQueryHandler(string $name, mixed $queryHandler)
  * @method void unregisterCustomQueryHandler(string $name)
