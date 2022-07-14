@@ -19,6 +19,8 @@ use Nesk\Rialto\Data\BasicResource;
  * @method-extended array|string[]|string[] headers()
  * @method \Nesk\Puphpeteer\Resources\SecurityDetails|null securityDetails()
  * @method-extended \Nesk\Puphpeteer\Resources\SecurityDetails|null securityDetails()
+ * @method mixed|null timing()
+ * @method-extended mixed|null timing()
  * @method mixed buffer()
  * @method-extended mixed buffer()
  * @method string text()
