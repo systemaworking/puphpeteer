@@ -7,7 +7,8 @@ use Nesk\Puphpeteer\Resources\BrowserFetcher;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\Process\Process;
 use Nesk\Rialto\AbstractEntryPoint;
-use vierbergenlars\SemVer\{version, expression, SemVerException};
+use Composer\Semver\Semver;
+
 
 /**
  * @property-read mixed devices
@@ -67,24 +68,24 @@ class Puppeteer extends AbstractEntryPoint
         );
     }
 
-    private function checkPuppeteerVersion(string $nodePath, LoggerInterface $logger): void {
-        $currentVersion = $this->currentPuppeteerVersion($nodePath);
-        $acceptedVersions = $this->acceptedPuppeteerVersion();
+    private function checkPuppeteerVersion(string $nodePath, LoggerInterface $logger): void
+{
+    $currentVersion = $this->currentPuppeteerVersion($nodePath);
+    $acceptedVersions = $this->acceptedPuppeteerVersion();
 
-        try {
-            $semver = new version($currentVersion);
-            $expression = new expression($acceptedVersions);
+    if ($currentVersion === null) {
+        $logger->warning("Puppeteer doesn't seem to be installed.");
 
-            if (!$semver->satisfies($expression)) {
-                $logger->warning(
-                    "The installed version of Puppeteer (v$currentVersion) doesn't match the requirements"
-                    ." ($acceptedVersions), you may encounter issues."
-                );
-            }
-        } catch (SemVerException $exception) {
-            $logger->warning("Puppeteer doesn't seem to be installed.");
-        }
+        return;
     }
+
+    if (!Semver::satisfies($currentVersion, $acceptedVersions)) {
+        $logger->warning(
+            "The installed version of Puppeteer (v$currentVersion) doesn't match the requirements"
+            ." ($acceptedVersions), you may encounter issues."
+        );
+    }
+}
 
     private function currentPuppeteerVersion(string $nodePath): ?string {
         $process = new Process([$nodePath, __DIR__.'/get-puppeteer-version.js']);
