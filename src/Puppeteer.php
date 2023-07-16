@@ -69,23 +69,23 @@ class Puppeteer extends AbstractEntryPoint
     }
 
     private function checkPuppeteerVersion(string $nodePath, LoggerInterface $logger): void
-{
-    $currentVersion = $this->currentPuppeteerVersion($nodePath);
-    $acceptedVersions = $this->acceptedPuppeteerVersion();
+    {
+        $currentVersion = $this->currentPuppeteerVersion($nodePath);
+        $acceptedVersions = $this->acceptedPuppeteerVersion();
 
-    if ($currentVersion === null) {
-        $logger->warning("Puppeteer doesn't seem to be installed.");
+        if ($currentVersion === null) {
+            $logger->warning("Puppeteer doesn't seem to be installed.");
 
-        return;
+            return;
+        }
+
+        if (!Semver::satisfies($currentVersion, $acceptedVersions)) {
+            $logger->warning(
+                "The installed version of Puppeteer (v$currentVersion) doesn't match the requirements"
+                ." ($acceptedVersions), you may encounter issues."
+            );
+        }
     }
-
-    if (!Semver::satisfies($currentVersion, $acceptedVersions)) {
-        $logger->warning(
-            "The installed version of Puppeteer (v$currentVersion) doesn't match the requirements"
-            ." ($acceptedVersions), you may encounter issues."
-        );
-    }
-}
 
     private function currentPuppeteerVersion(string $nodePath): ?string {
         $process = new Process([$nodePath, __DIR__.'/get-puppeteer-version.js']);
