@@ -127,7 +127,6 @@ class PuphpeteerTest extends TestCase
                 }
             }
         } else {
-            // dump($resource->getResourceIdentity());
             $this->assertInstanceOf("Nesk\\Puphpeteer\\Resources\\$name", $resource);
         }
 
