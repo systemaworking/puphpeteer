@@ -1,6 +1,6 @@
 {
-  "name": "@nesk/puphpeteer",
-  "version": "2.0.0",
+  "name": "@zoon/puphpeteer",
+  "version": "2.1.0",
   "description": "A Puppeteer bridge for PHP, supporting the entire API.",
   "keywords": [
     "php",
@@ -17,12 +17,12 @@
     "url": "https://johann.pardanaud.com/"
   },
   "license": "MIT",
-  "repository": "github:nesk/puphpeteer",
+  "repository": "github:zoonru/puphpeteer",
   "engines": {
     "node": ">=9.0.0"
   },
   "dependencies": {
-    "@nesk/rialto": "^1.2.1",
+    "@zoon/rialto": "github:zoonru/rialto#semver:^1.5.0",
     "puppeteer": "^20"
   },
   "devDependencies": {

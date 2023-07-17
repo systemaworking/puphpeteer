@@ -1,5 +1,5 @@
 {
-  "name": "nesk/puphpeteer",
+  "name": "zoon/puphpeteer",
   "description": "A Puppeteer bridge for PHP, supporting the entire API.",
   "keywords": [
     "php",
@@ -22,7 +22,7 @@
     "php": "^8.0",
     "ext-json": "*",
     "composer/semver": "^3.0",
-    "nesk/rialto": "dev-zoon",
+    "zoon/rialto": "^1.5",
     "psr/log": "^3.0",
     "thecodingmachine/safe": "^2.5"
   },
@@ -56,11 +56,5 @@
   },
   "config": {
     "sort-packages": true
-  },
-  "repositories": [
-    {
-      "type": "git",
-      "url": "https://github.com/zoonru/rialto"
-    }
-  ]
+  }
 }

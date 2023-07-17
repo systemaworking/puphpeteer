@@ -2,13 +2,13 @@
 
 <img src="https://user-images.githubusercontent.com/817508/100672192-dd258500-3361-11eb-845f-e8b5109752e4.png" style="max-width:100%;" width="190px" align="right">
 
-[![PHP Version](https://img.shields.io/packagist/php-v/nesk/puphpeteer.svg?style=flat-square)](http://php.net/)
-[![Composer Version](https://img.shields.io/packagist/v/nesk/puphpeteer.svg?style=flat-square&label=Composer)](https://packagist.org/packages/nesk/puphpeteer)
-[![Node Version](https://img.shields.io/node/v/@nesk/puphpeteer.svg?style=flat-square&label=Node)](https://nodejs.org/)
-[![NPM Version](https://img.shields.io/npm/v/@nesk/puphpeteer.svg?style=flat-square&label=NPM)](https://www.npmjs.com/package/@nesk/puphpeteer)
-[![Build Status](https://img.shields.io/travis/nesk/puphpeteer.svg?style=flat-square&label=Build%20Status)](https://travis-ci.org/nesk/puphpeteer)
+[![PHP Version](https://img.shields.io/packagist/php-v/zoon/puphpeteer.svg?style=flat-square)](http://php.net/)
+[![Composer Version](https://img.shields.io/packagist/v/zoon/puphpeteer.svg?style=flat-square&label=Composer)](https://packagist.org/packages/zoon/puphpeteer)
+[![Node Version](https://img.shields.io/node/v/@zoon/puphpeteer.svg?style=flat-square&label=Node)](https://nodejs.org/)
+[![NPM Version](https://img.shields.io/npm/v/@zoon/puphpeteer.svg?style=flat-square&label=NPM)](https://www.npmjs.com/package/@nesk/puphpeteer)
+[![Build Status](https://img.shields.io/travis/zoon/puphpeteer.svg?style=flat-square&label=Build%20Status)](https://travis-ci.org/nesk/puphpeteer)
 
-A [Puppeteer](https://github.com/GoogleChrome/puppeteer/) bridge for PHP, supporting the entire API. Based on [Rialto](https://github.com/nesk/rialto/), a package to manage Node resources from PHP.
+A [Puppeteer](https://github.com/GoogleChrome/puppeteer/) bridge for PHP, supporting the entire API. Based on [Rialto](https://github.com/zoonru/rialto/), a package to manage Node resources from PHP.
 
 Here are some examples [borrowed from Puppeteer's documentation](https://github.com/GoogleChrome/puppeteer/blob/master/README.md#usage) and adapted to PHP's syntax:
 
@@ -60,8 +60,8 @@ This package requires PHP >= 7.3 and Node >= 8.
 Install it with these two command lines:
 
 ```shell
-composer require nesk/puphpeteer
-npm install @nesk/puphpeteer
+composer require zoon/puphpeteer
+npm install github:zoonru/puphpeteer
 ```
 
 ## Notable differences between PuPHPeteer and Puppeteer
