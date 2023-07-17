@@ -6,8 +6,8 @@ use Nesk\Puphpeteer\Resources\ElementHandle;
 
 /**
  * @method ElementHandle|null querySelector(string $selector)
- * @method ElementHandle[] querySelectorAll(string $selector)
- * @method ElementHandle[] querySelectorXPath(string $expression)
+ * @method ElementHandle[]    querySelectorAll(string $selector)
+ * @method ElementHandle[]    querySelectorXPath(string $expression)
  */
 trait AliasesSelectionMethods
 {

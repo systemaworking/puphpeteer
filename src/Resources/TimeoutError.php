@@ -6,5 +6,4 @@ use Nesk\Rialto\Data\BasicResource;
 
 class TimeoutError extends BasicResource
 {
-    //
 }
