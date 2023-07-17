@@ -22,9 +22,6 @@ class ResourceInstantiator
             'BrowserContext' => function ($puppeteer) {
                 return $this->Browser($puppeteer)->createIncognitoBrowserContext();
             },
-            'BrowserFetcher' => function ($puppeteer) {
-                return $puppeteer->createBrowserFetcher();
-            },
             'CDPSession' => function ($puppeteer) {
                 return $this->Target($puppeteer)->createCDPSession();
             },

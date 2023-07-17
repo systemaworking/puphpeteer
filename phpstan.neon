@@ -4,6 +4,3 @@ parameters:
         - src
     fileExtensions:
         - php
-    parallel:
-        maximumNumberOfProcesses: 4
-    tipsOfTheDay: false

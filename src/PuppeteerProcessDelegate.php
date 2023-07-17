@@ -16,6 +16,15 @@ class PuppeteerProcessDelegate implements ShouldHandleProcessDelegation
     {
         $class = "Nesk\\Puphpeteer\\Resources\\$className";
 
-        return class_exists($class) ? $class : null;
+
+        if (class_exists($class))
+            return $class;
+
+        $classWithoutCDP = "Nesk\\Puphpeteer\\Resources\\" . preg_replace("/^CDP/", "", $className);
+
+         if (class_exists($classWithoutCDP))
+            return $classWithoutCDP;
+
+        return null;
     }
 }

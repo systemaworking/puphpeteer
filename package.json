@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@nesk/rialto": "^1.2.1",
-    "puppeteer": "^19"
+    "puppeteer": "^20"
   },
   "devDependencies": {
     "@types/yargs": "^15.0.10",

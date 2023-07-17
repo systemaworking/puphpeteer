@@ -70,6 +70,7 @@ class TestCase extends BaseTestCase
          */
         $this->browserOptions = [
             'args' => ['--no-sandbox', '--disable-setuid-sandbox'],
+            'headless' => 'new',
         ];
 
         if ($this->canPopulateProperty('browser')) {

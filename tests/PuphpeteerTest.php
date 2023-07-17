@@ -6,6 +6,7 @@ use Nesk\Puphpeteer\Puppeteer;
 use Nesk\Rialto\Data\JsFunction;
 use PHPUnit\Framework\ExpectationFailedException;
 use Nesk\Puphpeteer\Resources\ElementHandle;
+use Nesk\Rialto\Data\BasicResource;
 use Psr\Log\LoggerInterface;
 
 class PuphpeteerTest extends TestCase
@@ -126,6 +127,7 @@ class PuphpeteerTest extends TestCase
                 }
             }
         } else {
+            var_dump($resource->getResourceIdentity());
             $this->assertInstanceOf("Nesk\\Puphpeteer\\Resources\\$name", $resource);
         }
 
